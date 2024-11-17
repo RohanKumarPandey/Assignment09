@@ -1,3 +1,4 @@
+require('dotenv').require()
 const express = require('express');
 const mongoose = require('mongoose');
 const todoRoutes = require('./routes/todos');
@@ -7,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 
-const url = 'mongodb+srv://3rrrkp:rohan123@cluster0.pe3ei.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const url = process.env.MONGO_URL;
 
 
 mongoose.connect(url, {
