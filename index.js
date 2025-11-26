@@ -1,4 +1,4 @@
-require('dotenv').require()
+require('dotenv').configDotenv()
 const express = require('express');
 const mongoose = require('mongoose');
 const todoRoutes = require('./routes/todos');
